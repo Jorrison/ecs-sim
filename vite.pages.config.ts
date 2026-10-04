@@ -4,7 +4,7 @@ import { defineConfig } from "vite";
 
 /** Static build for GitHub Pages. Not used by the live preview. */
 export default defineConfig({
-  base: "/ecs-sim/",
+  base: "./",
   mode: "pages",
   resolve: { tsconfigPaths: true },
   plugins: [tailwindcss(), react()],
