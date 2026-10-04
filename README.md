@@ -1,5 +1,7 @@
 # ECS-Sim
 
+Live site: https://jorrison.github.io/ecs-sim/
+
 Teaching demonstrator for the Department of Marketing, College of Business, City University of Hong Kong.
 
 A closed campus shop (online transaction), a seeding community (online communication), and a data observatory that only records acts. Showcase counts are scripted for review. They are not a class log and not an open market.

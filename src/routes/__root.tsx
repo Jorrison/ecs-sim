@@ -29,18 +29,26 @@ export const Route = createRootRoute({
       },
     ],
   }),
-  component: () => (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <HeadContent />
-      </head>
-      <body>
+  component: () => {
+    const app = (
+      <>
         <PreviewHostBridge />
         <AuthProvider>
           <Outlet />
         </AuthProvider>
-        <Scripts />
-      </body>
-    </html>
-  ),
+      </>
+    );
+    if (import.meta.env.MODE === "pages") return app;
+    return (
+      <html lang="en" suppressHydrationWarning>
+        <head>
+          <HeadContent />
+        </head>
+        <body>
+          {app}
+          <Scripts />
+        </body>
+      </html>
+    );
+  },
 });
